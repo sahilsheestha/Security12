@@ -13,16 +13,7 @@ const PasswordStrengthBar = ({ password }) => {
   return (
     <div className="mt-2">
       <div className="flex justify-between text-xs text-gray-600 mb-1">
-        <span>Password Strength:</span>
-        <span style={{ color }} className="font-medium">{label}</span>
-      </div>
-      <div className="w-full bg-gray-200 rounded-full h-2">
-        <div 
-          className="h-2 rounded-full transition-all duration-300"
-          style={{ 
-            width: getBarWidth(), 
-            backgroundColor: color 
-          }}
+        
         ></div>
       </div>
       <div className="mt-1 text-xs text-gray-500">
