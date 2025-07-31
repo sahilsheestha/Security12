@@ -5,15 +5,7 @@ import axios from 'axios'
 import PasswordStrengthBar from './PasswordStrengthBar.jsx'
 import { validatePasswordComplexity } from '../utils/passwordUtils.js'
 
-const ChangePassword = () => {
-  const { backendUrl, token } = useContext(AppContext)
-  const [currentPassword, setCurrentPassword] = useState('')
-  const [newPassword, setNewPassword] = useState('')
-  const [confirmPassword, setConfirmPassword] = useState('')
-  const [showPasswords, setShowPasswords] = useState({
-    current: false,
-    new: false,
-    confirm: false
+
   })
   const [passwordErrors, setPasswordErrors] = useState([])
   const [isLoading, setIsLoading] = useState(false)
