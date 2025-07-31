@@ -1,6 +1,14 @@
 import React from 'react'
 import { getPasswordStrength, getPasswordStrengthLabel, getPasswordStrengthColor } from '../utils/passwordUtils.js'
 
+const PasswordStrengthBar = ({ password }) => {
+  const strength = getPasswordStrength(password)
+  const label = getPasswordStrengthLabel(strength)
+  const color = getPasswordStrengthColor(strength)
+  
+  const getBarWidth = () => {
+    return `${(strength / 5) * 100}%`
+  }
 
   return (
     <div className="mt-2">
